@@ -1,0 +1,9 @@
+<div class="chip">
+	<img ng-src="{{mdcChipsCtrl.imageSrc}}" alt="{{mdcChipsCtrl.text}}" ng-if="mdcChipsCtrl.imageSrc">
+	<span>
+		{{mdcChipsCtrl.text}}
+	</span>
+	<md-button class="closebtn" ng-if="!mdcChipsCtrl.readonly" ng-click="mdcChipsCtrl.returnCustomId()">
+		<i class="material-icons">close</i>
+	</md-button>
+</div>
