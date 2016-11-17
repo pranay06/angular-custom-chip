@@ -4,17 +4,20 @@ app.component("mdcChips", {
 	controllerAs: "mdcChipsCtrl",
 	bindings: {
 		"imageSrc": "@",
-		"text": "@",
 		"deleteAction": "&",
 		"customId": "@",
 		"readonly": "<"
 
+	},
+	transclude: {
+		"content": "content",
+		"chipImage": "chipImage"
 	}
 });
 
 function mdcChipsCtrl() {
 	var mdcChipsCtrl = this;
-	console.log("I am inside mdcChipsCtrl");
+	console.log("I am inside mdcChipsCtrl", mdcChipsCtrl);
 	mdcChipsCtrl.returnCustomId = function() {
 		mdcChipsCtrl.deleteAction({
 			"customId": mdcChipsCtrl.customId 

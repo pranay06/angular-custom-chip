@@ -7,7 +7,19 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	</head>
 	<body ng-app="ng-custom-chips" ng-controller="mainController">
-		<mdc-chips image-src="http://static.dnaindia.com/sites/default/files/2015/11/05/392379-srk.jpg" text="Shah Rukh Khan" delete-action="delete(customId)" custom-id="1" readonly="readonly"></mdc-chips>
+
+	
+		<div layout="row">
+			<mdc-chips image-src="http://static.dnaindia.com/sites/default/files/2015/11/05/392379-srk.jpg"  delete-action="delete(customId)" custom-id="1" readonly="readonly">
+				<content>
+					Shah Rukh khan
+				</content>
+				<chip-image>
+					<img ng-src="http://static.dnaindia.com/sites/default/files/2015/11/05/392379-srk.jpg"  alt="SRK"></img>
+				</chip-image>
+			</mdc-chips>
+		</div>
+
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
 		<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
 		<script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
